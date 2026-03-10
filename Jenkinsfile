@@ -1,12 +1,11 @@
 pipeline {
-
     agent any
 
     stages {
 
         stage('Clone Code') {
             steps {
-                echo "Cloning repository"
+                echo 'Cloning repository'
             }
         }
 
@@ -24,7 +23,7 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                sh 'pytest'
+                sh 'python3 -m pytest'
             }
         }
 
